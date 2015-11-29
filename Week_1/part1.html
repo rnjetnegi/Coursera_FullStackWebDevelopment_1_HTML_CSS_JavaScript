@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style>
+        </style>
+    </head>
+    
+    <body>
+        <div>
+            <h3>Please Enter Your Details For Our Dating Website!</h3>
+            <form>
+                <fieldset>
+                    <legend>Your face</legend>
+                        <label for="YourImage">Your Image:&nbsp</label>
+                        <input type="file" required><br/>
+                        <label for="img">Image Preview:&nbsp</label>
+                        <img src="" id="preview"/>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Your general Details</legend>
+                    <label for="name">Name:&nbsp</label>
+                    <input type="text" placeholder="Your Full Name" required> <br/>
+                    <label for="gender">Gender:&nbsp</label>
+                    <input type="radio" name="gender" value="Male" required>Male
+                    <input type="radio" name="gender" value="Male" required>Female<br/>
+                    <label for="age">Age</>
+                    <input type="number" name="age" min="16" max="100"/><br/>
+                    
+                    <label for="dob">Date of birth</>
+                    <input type="date" name="date" placeholder="dd/mm/yyyy"/><br/>
+                    
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>
