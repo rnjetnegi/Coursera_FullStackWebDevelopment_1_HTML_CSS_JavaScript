@@ -30,7 +30,7 @@
                     
                     <label for="dob">Date of birth</>
                     <input type="date" name="date" placeholder="dd/mm/yyyy"/><br/>
-                    <label for="favColor">Favorite color</>
+                    <label for="favColor">Favorite color</label>
                     <input type="color" name="favColor"/><br/>
                     
                     <label for="country">Which country</label>
@@ -41,10 +41,34 @@
                     	<option value="BanglaDesh">Bangla Desh</option>
                     	<option value="SriLanka ">Sri Lanka</option>
                     	<option value="Bhutan">Bhutam</option>
-                    </select>
-                    
-                    
+                    </select>  
                 </fieldset>
+				
+				<fieldset>
+					<legend>Your Indicators</legend>
+					<label for="Height">Height:&nbsp</label><label>Short</short>
+						<input type="range" name="Height" min="0" max="100"><label>Tall</label><br/>
+					<label for="Salary">Salary:&nbsp</label><label>Poor</label>
+						<input type="range" min="0" max="100"><label>Rich</label><br/>
+				</fieldset>
+				
+				<fieldset>
+					<legend>Your Contact Information</legend>
+					<label for="email">Email:&nbsp</label>
+                    <input type="email" name="email" required/><br/>
+					
+					<label for="mobile"></>
+                    <input type="tel" name="mobile"/><br/>
+					
+					<label for="address"></label>
+                    <textarea cols="20" rows="3"/></textarea><br/>
+					
+					<label for="MethodTocontect">Mehtod to contact you:&nbsp</label>
+                    <input type="radio" name="MethodTocontect" value="email"/>Email
+					<input type="radio" name="MethodTocontect" value="Watsapp"/>Watsapp
+					<input type="radio" name="MethodTocontect" value="In-app chat"/>In-app chat<br>
+				</fieldset></br>
+				<input type="submit" value="Submit"/>
             </form>
         </div>
     </body>
