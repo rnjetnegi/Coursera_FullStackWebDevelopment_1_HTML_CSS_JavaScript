@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			var colors = ["blue","cyan","gold","gray","green","manenta","orange","red","white","yellow"];//array of colors
+			var target_color;	//random choose color
+			var target_index = 0;	//index of randomly choose element
+			var input_color;	//color entered by user
+			var finish = false;	// exit from loop if value is true
+			var attempts = 0;	//no. of attempts to guess the color
+			
+			//do_game function	
+			function do_game(){
+				target_index = Math.floor(Math.random()*(colors.length));//random number generated 0 to array length-1
+				target_color = colors[target_index]; //assigning the randomly generated color to targat_color
+				alert(target_color);
+				getInputColor();
+				
+				while(!finish){
+					attempts++;
+					check_guess();
+				}	
+			}
+			//function check_guess
+			function check_guess(){
+				//if statement to check whether the element guessed is in the range of array
+				if(colors.indexOf(input_color)<0){
+					if(input_color == null){
+						getInputColor();
+					}
+					alert("Sorry! I don't recognizance your color\nPlease try again");
+					getInputColor();
+				}else if(input_color > target_color){ //input color is alphabetically grater the generated color
+					alert("Sorry! your guess is not correct\n\nHint:your color is alphabetically grater then mine\n\nPlease try again");
+					getInputColor();
+				}else if(target_color > input_color){ //if randomly generated color is alphabetically grater then input color
+					alert("Sorry! your guess is not correct\n\nHint:your color is alphabetically lower then mine\n\nPlease try again");
+					getInputColor();
+				}else{	//if color matched
+					myBody=document.getElementsByTagName("body")[0];
+					myBody.style.background=input_color;
+					alert("Congratulation! you have guessed the color\n\n It took you "+attempts+" guesses to finish the game!\n\nYou can see color in the background");
+					finish = true;
+				}
+			}
+			function getInputColor(){
+				input_color = prompt("I am thinking of one of these colors:\n\n" + 
+				colors.join(", ")+"\n\n" + 
+				"What color I am thinking of?");
+				// condition of user cancel the prompt
+			}
+		</script>
+	</head>
+	<body onload="do_game()">
+	</body>
+</html>

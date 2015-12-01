@@ -2,7 +2,22 @@
 
 <html>
     <head>
-        <style>
+        <style type="text/css">
+			fieldset{
+				background:lightyellow;
+				border:10px solid yellow;
+				margin-bottom:10px;
+				width:720px;
+			}
+			fieldset label{
+				width:180px;
+				display:inline-block;
+				text-align:right;
+				vertical-align: top;
+			}
+			label:hover {
+				font-size:23px;
+			}
         </style>
     </head>
     
@@ -12,28 +27,31 @@
             <form>
                 <fieldset>
                     <legend>Your face</legend>
-                        <label for="YourImage">Your Image:&nbsp</label>
-                        <input type="file" required><br/>
-                        <label for="img">Image Preview:&nbsp</label>
-                        <img src="" id="preview"/>
+                    <label for="avatar">Your image:</label>
+					<input type="file" id="avatar" name="avatar" required>
+					<br/>
+                    <label for="preview">Image Preview:</label>
+					<img id="preview"/> 
                 </fieldset>
-                
+              <!--
                 <fieldset>
                     <legend>Your general Details</legend>
-                    <label for="name">Name:&nbsp</label>
-                    <input type="text" placeholder="Your Full Name" required> <br/>
-                    <label for="gender">Gender:&nbsp</label>
-                    <input type="radio" name="gender" value="Male" required>Male
-                    <input type="radio" name="gender" value="Male" required>Female<br/>
-                    <label for="age">Age</>
+                    <label for="name">Name:</label>
+                    <input type="text" placeholder="Your Full Name" id="name" required> <br/>
+                    
+					<label>Gender:</label>
+                    <input type="radio" name="gender" value="Male" id="male" required>Male
+                    <input type="radio" name="gender" value="Male" id="female" required>Female<br/>
+                    <label for="age">Age:</label>
                     <input type="number" name="age" min="16" max="100"/><br/>
+                
+                    <label for="date">Date of birth</label>
+                    <input type="date" id="date" placeholder="dd/mm/yyyy"/><br/>
+                  
+					<label for="favColor">Favorite color</label>
+                    <input type="color" id="favColor"/><br/>
                     
-                    <label for="dob">Date of birth</>
-                    <input type="date" name="date" placeholder="dd/mm/yyyy"/><br/>
-                    <label for="favColor">Favorite color</label>
-                    <input type="color" name="favColor"/><br/>
-                    
-                    <label for="country">Which country</label>
+                    <label>Which country</label>
                     <select>
                     	<option value="India">India</option>
                     	<option value="Pakistan">Pakistan</option>
@@ -46,30 +64,33 @@
 				
 				<fieldset>
 					<legend>Your Indicators</legend>
-					<label for="Height">Height:&nbsp</label><label>Short</short>
-						<input type="range" name="Height" min="0" max="100"><label>Tall</label><br/>
-					<label for="Salary">Salary:&nbsp</label><label>Poor</label>
-						<input type="range" min="0" max="100"><label>Rich</label><br/>
+					<label for="Height">Height:Short</label>
+						<input type="range" id="Height" min="0" max="100"><span>Tall</span><br/>
+					<label for="salary">Salary:Poor</label>
+						<input type="range" id="salary" min="0" max="100"><span>Rich</span><br/>
 				</fieldset>
 				
 				<fieldset>
 					<legend>Your Contact Information</legend>
-					<label for="email">Email:&nbsp</label>
-                    <input type="email" name="email" required/><br/>
+					<label for="email">Email:</label>
+                    <input type="email" id="email" required/><br/>
 					
-					<label for="mobile"></>
-                    <input type="tel" name="mobile"/><br/>
+					<label for="mobile">Moble:</label>
+                    <input type="tel" id="mobile"/><br/>
 					
-					<label for="address"></label>
-                    <textarea cols="20" rows="3"/></textarea><br/>
-					
-					<label for="MethodTocontect">Mehtod to contact you:&nbsp</label>
-                    <input type="radio" name="MethodTocontect" value="email"/>Email
-					<input type="radio" name="MethodTocontect" value="Watsapp"/>Watsapp
-					<input type="radio" name="MethodTocontect" value="In-app chat"/>In-app chat<br>
-				</fieldset></br>
+					<label for="address">Address:</label>
+                    <textarea rows="3" cols="50" id="address"/></textarea>
+					<br/>
+					<label>Mehtod to contact you:</label>
+							<input type="checkbox" id="email" value="email">Email
+							<input type="checkbox" id="Watsapp" value="Watsapp"/>Watsapp
+							<input type="checkbox" id="in_app_chat" value="In-appChat"/>In-app chat<br>
+				</fieldset>
+				</br> -->
 				<input type="submit" value="Submit"/>
+				
             </form>
+			<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
         </div>
     </body>
 </html>
